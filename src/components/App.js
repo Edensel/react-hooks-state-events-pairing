@@ -1,18 +1,21 @@
-import video from "../data/video.js";
+import React from 'react';
+import VideoDetails from './VideoDetails';
+import Comments from './Comments';
+import ToggleCommentsButton from './ToggleCommentsButton';
+import videoData from '../data/video';
 
 function App() {
-  console.log("Here's your data:", video);
+  const [showComments, setShowComments] = React.useState(true);
+
+  const toggleComments = () => {
+    setShowComments((prevState) => !prevState);
+  };
 
   return (
     <div className="App">
-      <iframe
-        width="919"
-        height="525"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameBorder="0"
-        allowFullScreen
-        title="Thinking in React"
-      />
+      <VideoDetails video={videoData} />
+      {showComments && <Comments comments={videoData.comments} />}
+      <ToggleCommentsButton showComments={showComments} onClick={toggleComments} />
     </div>
   );
 }

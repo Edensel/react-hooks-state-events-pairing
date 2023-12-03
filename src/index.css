@@ -1,12 +1,65 @@
-body {
+/* Reset default margin and padding */
+body,
+h1,
+h2,
+h3,
+p,
+button {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-.App {
-  text-align: center;
+/* Set a default font family */
+body {
+  font-family: Arial, sans-serif;
 }
+
+/* Style for the App container */
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for the video details */
+.video-details {
+  margin-bottom: 20px;
+}
+
+/* Style for the video player iframe */
+.video-details iframe {
+  width: 100%;
+  height: 400px;
+}
+
+/* Style for the upvote/downvote buttons */
+.video-details button {
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style for comments section */
+.comments {
+  margin-bottom: 20px;
+}
+
+.comments h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.comment {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Style for the toggle comments button */
+.toggle-comments-button button {
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Optional: Add styles for bonus functionalities as needed */
